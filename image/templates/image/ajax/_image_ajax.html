@@ -1,0 +1,79 @@
+// console.log("Hello from ajax");
+
+// let messaseDiv = $("#djangoMessage")
+// let imageDiv = $("#uploadedImage")
+// let formDiv = $("#imageUploadForm")
+
+// let csrf = $("input[name=csrfmiddlewaretoken]").val()
+// let name = $("#id_name")
+// let image = $("#id_image")
+// let description = $("#id_description")
+// let url = ""
+
+// // image.addEventListener('change', () => {
+// //     let imgData = image.files
+// //     const url = URL.createObjectURL(imgData)
+// //     imageDiv.innerHTML = `<img src=${url} width=200px >`
+// //     console.log("all ok")
+
+// // })
+
+// $(image).change(function (e) {
+//     e.preventDefault();
+//     $(imageDiv).html(`<img src=${url} width=200px >`);
+//     const url = URL.createObjectURL(imgData)
+//     console.log("all ok")
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log("Hello from ajax");
+
+let messaseDiv = document.getElementById("djangoMessage")
+let imageDiv = document.getElementById("uploadedImage")
+let formDiv = document.getElementById("imageUploadForm")
+
+let csrf = document.getElementsByName("input[name=csrfmiddlewaretoken]")
+let name = document.getElementById("id_name")
+let image = document.getElementById("id_image")
+let description = document.getElementById("id_description")
+let url = ""
+
+image.addEventListener('change', () => {
+    let imgData = image.files[0]
+    const url = URL.createObjectURL(imgData)
+    imageDiv.innerHTML = `<img src=${url} width=200px >`
+    console.log("all ok")
+
+})
+
+formDiv.addEventListener('submit', e => {
+    e.preventDefault()
+
+    formData = new FormData()
+    // formData.append('csrfmiddlewaretoken': csrf)
+})
+
+
+
+
+
